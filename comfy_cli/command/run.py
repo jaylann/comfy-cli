@@ -35,7 +35,7 @@ def load_api_workflow(file: str):
         return workflow
 
 
-def execute(workflow: str, host, port, wait=True, verbose=False, local_paths=False, timeout=30):
+def execute(workflow: str, host, port, wait=True, verbose=False, local_paths=False, timeout=600):
     workflow_name = os.path.abspath(os.path.expanduser(workflow))
     if not os.path.isfile(workflow):
         pprint(
